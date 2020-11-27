@@ -1,6 +1,6 @@
 <?php
 namespace App\Staragry;
-class Notifier
+abstract class Notifier
 {
   protected Notify $notify;
   public function changeType(Notify $noti)

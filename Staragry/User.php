@@ -3,7 +3,7 @@ namespace App\Staragry;
 class User
 {
 
-  public function __construct($type) {
+  public function __construct() {
     $notifier = new Notifier();
     $obj = null;
     switch ($type) {
