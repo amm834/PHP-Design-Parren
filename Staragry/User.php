@@ -4,6 +4,7 @@ class User
 {
 
   public function __construct($type) {
+    $notifier = new Notifier();
     $obj = null;
     switch ($type) {
       case $obj = 'SMS':
@@ -19,6 +20,7 @@ class User
         echo 'Only Email,SMS and Phone notify!';
         break;
     }
-    $obj->send();
+    $notifier->changeType($obj);
+    $notifier->sendIt();
   }
 }
